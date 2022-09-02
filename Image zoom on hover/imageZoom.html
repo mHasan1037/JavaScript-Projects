@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="imageZoom.css">
+    <title>Image Zoom</title>
+</head>
+<body>
+    <div class="container">
+        <div class="small-img">
+           <img class="active" src="brooke-cagle-WHWYBmtn3_0-unsplash.jpg">
+           <img src="charles-forerunner-3fPXt37X6UQ-unsplash.jpg">
+           <img src="eli-francis-_M-DrbiNFa4-unsplash.jpg">
+           <img src="farzad.jpg">
+        </div>
+        <div class="bg-img" id="magnifying_area">
+          <img id="magnifying_img" src="brooke-cagle-WHWYBmtn3_0-unsplash.jpg">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const smallImgs = document.querySelectorAll('.small-img img');
+
+        smallImgs.forEach(smallImg =>{
+        smallImg.addEventListener('click', ()=>{
+            magnifying_img.src = smallImg.src;
+            smallImgs.forEach(smallImg =>{ smallImg.classList.remove('active')})
+            smallImg.classList.add('active')
+        })
+        })
+
+
+        const magnifying_area = document.getElementById('magnifying_area');
+        const magnifying_img = document.getElementById('magnifying_img');
+
+        magnifying_area.addEventListener("mousemove", function(){
+        clientX = event.clientX - magnifying_area.offsetLeft
+        clientY = event.clientY - magnifying_area.offsetTop
+
+        mWidth = magnifying_area.offsetWidth
+        mHeight = magnifying_area.offsetHeight
+
+        clientX = clientX / mWidth * 100
+        clientY = clientY / mHeight * 100
+
+        magnifying_img.style.transform = 'translate(-'+clientX+'%, -'+clientY+'%) scale(2)'
+        })
+
+        magnifying_area.addEventListener("mouseleave", function(){
+        magnifying_img.style.transform = 'translate(-50%, -50%) scale(1)'
+        })
+    </script>
+</body>
+</html>
