@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:  0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgb(129, 238, 238);
+}
+
+.container{
+    max-width: 500px;
+    width: 90vw;
+    min-height: 50vh;
+    height: auto;
+    background-color: aqua;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mark-container{
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
+
+.mark-heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mark-heading h1{
+    width: 30%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: white;
+}
+
+.mark-heading h1::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 80%;
+    background-color: white;
+    left: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.number-box{
+    margin: 10px 0;
+    background-color: transparent;
+    padding: 5px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgb(140, 199, 226);
+    width: 200px;
+}
+
+.number-box:focus{
+    outline: none;
+}
+
+.submit{
+    margin: 10px 0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color:rgba(0, 0, 0);
+}
+
+.submit:focus{
+    transform: scale(0.98);
+}
+
+.mark-result{
+     margin-bottom: 10px;
+     font-size: 20px;
+     color: white;
+     text-align: center;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .container{
+        height: auto;
+    }
+    .mark-container{
+        flex-direction: column;
+    }
+
+    .mark-heading{
+        margin-bottom: 15px;
+    }
+
+    .mark-heading h1{
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .mark-heading h1::before{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+}
