@@ -1,0 +1,124 @@
+body{
+    background-color: rgb(22, 73, 167);
+}
+
+.wrapper{
+    width: 370px;
+    margin: 130px auto 0;
+}
+
+.select-btn, .options li{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.select-btn{
+    height: 65px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.select-btn i{
+    font-size: 31px;
+    transition: transform 0.3s linear;
+}
+
+.wrapper.active .select-btn i{
+    transform: rotate(-180deg);
+}
+
+.content{
+    display: none;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 7px;
+    background-color: #fff;
+    animation: showContent 0.2s linear;
+    transition: transform 0.5s ease;
+}
+
+@keyframes showContent{
+    0%{
+       display: none;
+       transform: translateY(-15px);
+    }
+    30%{
+        transform: translateY(15px); 
+    }
+    60%{
+        transform: translateY(-5px);  
+    }
+    100%{
+        transform: translateY(0px); 
+    }
+}
+
+.wrapper.active .content{
+    display: block; 
+}
+
+.content .search{
+    position: relative;
+}
+
+.search i{
+    left: 15px;
+    line-height: 53px;
+    position: absolute;
+    color: #999;
+    font-size: 20px;
+}
+
+.search input{
+    height: 53px;
+    width: 100%;
+    font-size: 17px;
+    padding: 0 15px 0 43px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.content .options{
+    margin-top: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 7px;
+}
+
+.options::-webkit-scrollbar{
+    width: 7px;
+}
+
+.options::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 25px;
+}
+
+.options{
+    padding-inline-start: 0;
+}
+
+.options li{
+    height: 50px;
+    border-radius: 5px;
+    padding: 0 13px;
+    font-size: 21px;
+}
+
+.options li:hover, li.selected{
+    background: #f2f2f2;
+}
+
