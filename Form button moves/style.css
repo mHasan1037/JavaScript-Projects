@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.container{
+    border: 2px solid rgb(240, 238, 238);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    height: 330px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+.form-input{
+    margin-bottom: 18px;
+    width: 300px;
+    position: relative;
+}
+
+.alert-msg{
+    position: absolute;
+    top: -8px;
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.form-input input{
+    width: 100%;
+    padding: 7px 0;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-bottom-color: gray;
+}
+
+.form-input input:focus{
+    outline: none;
+    border-bottom-color: rgb(6, 184, 44);
+}
+
+button{
+    background-color: #4fc6db;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    height: 35px;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateX(0);
+    transition: 0.3s ease;
+}
+
+button.right{
+    transform: translateX(250px);
+}
+
+button.left{
+    transform: translateX(30px);
+}
+
+button.center{
+    transform: translateX(90px);
+}
+
+button.center:hover{
+    background-color: #08bedf;
+}
+
+
+
+.modal{
+    position: absolute;
+    background-color: white;
+    height: 500px;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(240, 238, 238);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    display: none;
+}
+
+.cross{
+    position: absolute; 
+    top: 10px; 
+    right: 10px;
+    background-color: rgb(151, 150, 150);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: white;
+    cursor: pointer;
+}
