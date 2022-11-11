@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url('domenico-loia-hGV2TfOh0ns-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(10, 10, 10, 0.3);
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;
+}
+
+nav li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav li span{
+    padding-left: 5px;
+}
+
+li a{
+    padding: 5px;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+.cart a{
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+.container{
+    display: flex;
+    gap: 20px;
+}
+
+.image-bot{
+    width: 150px;
+    height: 250px;
+}
+
+.products-container{
+    text-align: center;
+    margin: 20px;
+}
+
+.product-header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.products{
+    text-align: left;
+}
+
+.product{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 10px 0;
+}
+
+.cart-img{
+    width: 80px;
+}
+
